@@ -4,9 +4,13 @@
 ################################################################################
 
 # common
-domain: (required)
-main_user_name: (required)
-organization: (required)
+domain: anm.cloud
+main_user_name: ims
+main_pass_word: vFsqwX774cb
+other_password: vdeThn343sz
+organization: ANM Cloud Services
+friendly_networks:
+  - "172.26.0.0/20"
 
 # admin email
 # fail2ban reports will be sent to this address
@@ -19,7 +23,7 @@ mail_virtual_domains:
 mail_virtual_users:
   - account: "{{ main_user_name }}"
     domain: "{{ domain }}"
-    password: TODO
+    password: "{{ other_password  }}"
     domain_pk_id: 1
 mail_virtual_aliases:
   - source: "root@{{ domain }}"
@@ -37,23 +41,29 @@ mail_virtual_aliases:
 
 # timezone
 # common_timezone will be used in the common and mailserver roles
-common_timezone: 'Etc/UTC'
+common_timezone: 'US/Eastern'
 
 # znc
-irc_nick: (required)
-irc_ident: (required)
-irc_realname: (required)
-irc_quitmsg: (required)
-irc_password: TODO
+irc_nick: ims
+irc_ident: ims
+irc_realname: IMS Director
+irc_quitmsg: See ya round!
+irc_password: "{{ other_password  }}"
+irc_timezone: "America/New_York"
 
 # xmpp
 prosody_admin: "{{ admin_email }}"
 prosody_virtual_domain: "{{ domain }}"
 prosody_accounts:
   - name: "{{ main_user_name }}"
-    password: TODO
+    password: "{{ other_password  }}"
 
 # openvpn
+openvpn_key_country: "US"
+openvpn_key_province: "Virginia"
+openvpn_key_city: "Afton"
+openvpn_key_org: "ANM Cloud Services"
+openvpn_key_ou: "IMS"
 openvpn_clients:
   - laptop
   - phone

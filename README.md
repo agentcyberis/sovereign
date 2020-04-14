@@ -215,4 +215,9 @@ Ask questions and provide feedback in `#sovereign` on [Freenode](http://freenode
 Tomcat8 vs Tomcat7
 ------------------
 
-On Debian 9 (Stretch") solr-tomcat will install tomcat8 not tomcat7 so that makes a mess of the mailserver and monit playbooks. Thus this branch (currently feature-tomcat8) has changes to refer, and configure, tomcat8.
+On Debian 9 ("Stretch") solr-tomcat will install tomcat8 not tomcat7 so that makes a mess of the mailserver and monit playbooks. Thus this branch (currently feature-tomcat8) has changes to refer, and configure, tomcat8.
+
+Php7 vs Php5
+------------
+
+Php5 is no longer supported and on Stretch it isn't even available. Since other packages used in sovereign will be updated for Stretch they will also probably require php7 so I've just updated everyting to use php7 instead of php5.

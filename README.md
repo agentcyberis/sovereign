@@ -211,3 +211,8 @@ IRC
 ===
 
 Ask questions and provide feedback in `#sovereign` on [Freenode](http://freenode.net).
+
+Tomcat8 vs Tomcat7
+------------------
+
+On Debian 9 (Stretch") solr-tomcat will install tomcat8 not tomcat7 so that makes a mess of the mailserver and monit playbooks. Thus this branch (currently feature-tomcat8) has changes to refer, and configure, tomcat8.

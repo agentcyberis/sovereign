@@ -8,7 +8,7 @@
   service: name=opendkim state=restarted
 
 - name: restart solr
-  service: name=tomcat7 state=restarted
+  service: name=tomcat8 state=restarted
 
 - name: import sql postfix
   command: >-

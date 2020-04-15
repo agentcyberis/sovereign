@@ -234,3 +234,8 @@ Tarsnap
 -------
 
 Update version from 1.0.36.1 to 1.0.39
+
+ZNC Passwords
+-------------
+
+ZNC passwords need to have sha-256 hashes rather than sha-512. Changed password generation and generation tests to reflect using sha-256 for ZNC.

@@ -244,3 +244,8 @@ Wallabag Not Idempotent
 -----------------------
 
 When running the playbook after wallabag is installed it errors out complaining that the local git repo has been changed and thus cannot do the clone operation. This has been changed to only do the clone if a php config file for wallabag does NOT exist. See issue #675 for details as well as wallabag.yml at synchrone/sovereign github repo. This might have unintended consequences.
+
+Changed Call Interface for passlib v1.7.x
+-----------------------------------------
+
+On Debian 9 Stretch, passlib version 1.7.x gets downloaded and the call interface is quite a bit different. See [passlib 1.7.2 documentation](https://passlib.readthedocs.io/en/stable/lib/passlib.hash.sha256_crypt.html) for the new interface which I incorporated into the password_hash.py filter.

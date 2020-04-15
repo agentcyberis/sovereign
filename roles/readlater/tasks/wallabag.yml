@@ -7,10 +7,11 @@
        dest=/var/www/wallabag
        version={{ wallabag_version }}
        accept_hostkey=yes
+  when: wallabag_config.stat.exists == False
 
 - name: Remove wallabag 'install' directory if its configuration file is there
   file: name=/var/www/wallabag/install state=absent
-  when: wallabag_config.stat.exists
+  when: wallabag_config.stat.exists == True
 
 - name: Install wallabag dependencies
   apt: pkg={{ item }} state=present

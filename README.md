@@ -239,3 +239,8 @@ ZNC Passwords
 -------------
 
 ZNC passwords need to have sha-256 hashes rather than sha-512. Changed password generation and generation tests to reflect using sha-256 for ZNC.
+
+Wallabag Not Idempotent
+-----------------------
+
+When running the playbook after wallabag is installed it errors out complaining that the local git repo has been changed and thus cannot do the clone operation. This has been changed to only do the clone if a php config file for wallabag does NOT exist. See issue #675 for details as well as wallabag.yml at synchrone/sovereign github repo. This might have unintended consequences.

@@ -212,6 +212,9 @@ IRC
 
 Ask questions and provide feedback in `#sovereign` on [Freenode](http://freenode.net).
 
+CHANGES FOR DEBIAN 9 STRETCH
+============================
+
 Tomcat8 vs Tomcat7
 ------------------
 
@@ -221,3 +224,13 @@ Php7 vs Php5
 ------------
 
 Php5 is no longer supported and on Stretch it isn't even available. Since other packages used in sovereign will be updated for Stretch they will also probably require php7 so I've just updated everyting to use php7 instead of php5.
+
+Fail2Ban
+--------
+
+Update Jails defined for SSH and Apache.
+
+Tarsnap
+-------
+
+Update version from 1.0.36.1 to 1.0.39
